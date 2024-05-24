@@ -16,15 +16,16 @@ class PedalFactory extends Factory
      */
     public function definition(): array
     {
-        $brands = ['BOSS', 'Ibanez', 'Electro-Harmonix', 'Dunlop', 'MXR'];
-        $types = ['Distortion', 'Overdrive', 'Delay', 'Wah', 'Chorus'];
-        $colors = ['Orange', 'Green', 'Silver', 'Black', 'Blue'];
+        $brands = ['BOSS', 'Ibanez', 'Electro-Harmonix', 'Dunlop', 'MXR', 'TC Electronic'];
+        $types = ['Distortion', 'Overdrive', 'Delay', 'Wah', 'Chorus', 'Tuner'];
+        $colors = ['Orange', 'Green', 'Silver', 'Black', 'Blue', 'White'];
         $models = [
             'DS-1',       
             'TS9',        
             'Memory Man', 
             'Cry Baby',   
-            'M234'        
+            'M234',       
+            'Polytune'
         ];
 
         return [       

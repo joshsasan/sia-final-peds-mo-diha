@@ -53,6 +53,14 @@ class PedalSeeder extends Seeder
                 'color' => 'Blue',
                 'price' => 7499.00,
             ],
+            [
+                'image' => 'images/polytune.png',
+                'brand' => 'TC Electronic',
+                'model' => 'Polytune',
+                'type' => 'Tuner',
+                'color' => 'White',
+                'price' => 12999.00,
+            ],
         ];
         
         foreach ($pedals as $pedal) {

@@ -1,7 +1,7 @@
 @extends('layout')
-    @php
-        use SimpleSoftwareIO\QrCode\Facades\QrCode;
-    @endphp
+@php
+    use SimpleSoftwareIO\QrCode\Facades\QrCode;
+@endphp
 @section('content')
 <div class="container bg-gray-200 w-full max-w-full h-max min-h-full px-8 py-4">
     <div class="heading flex">
@@ -23,7 +23,10 @@
         <div class="content-wrapper grid grid-cols-3 gap-4">
             @foreach ($pedals as $index => $ped)
                 <a href="{{ route('Pedal.detail', ['model' => $ped->model]) }}" class="p-8 border border-black border-solid my-4 shadow-md">
-                    <img src="{{ asset('images/' . ($index + 1) . ($index == 2 ? '.jpeg' : '.jpg')) }}" alt="A picture of {{ $ped->brand }} {{ $ped->model }}" class="mb-4" style="min-width: 200px; min-height: 100px;">
+                    @php
+                        $imageFile = $index == 2 ? '3.jpeg' : ($index == 5 ? '6.jpeg' : ($index + 1) . '.jpg');
+                    @endphp
+                    <img src="{{ asset('images/' . $imageFile) }}" alt="A picture of {{ $ped->brand }} {{ $ped->model }}" class="mb-4" style="min-width: 200px; min-height: 100px;">
                     <div>Brand: {{$ped->brand}}</div>
                     <div>Model: {{$ped->model}}</div>
                     <div>Type: {{$ped->type}}</div>

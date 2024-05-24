@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('brand');
             $table->string('model');
-            $table->enum('type', ['Distortion', 'Overdrive', 'Delay', 'Wah', 'Chorus']);
+            $table->enum('type', ['Distortion', 'Overdrive', 'Delay', 'Wah', 'Chorus', 'Tuner']);
             $table->string('color');
             $table->float('price');
             $table->timestamps();
